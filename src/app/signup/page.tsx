@@ -4,7 +4,7 @@ import Link from "next/link";
 import React, { use, useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import axios from "axios";
-import toast from "react-hot-toast";
+import toast, { Toaster } from "react-hot-toast";
 
 
 export default function SignupPage() {
@@ -86,6 +86,7 @@ export default function SignupPage() {
                 >
                     {buttonDisabled ? "Loading..." : "Signup"}
                 </button>
+                <Toaster />
                 <Link href={"/login"} className="text-center underline">
                     visit login page
                 </Link>
